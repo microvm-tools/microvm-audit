@@ -11,7 +11,7 @@
   };
 
   inputs = {
-    claude-vm.url = "github:microvm-tools/agent-vm";
+    claude-vm.url = "github:microvm-tools/agent-vm/v0.19.0";
 
     # The skill: third-party instructions, so pinned to a commit and never
     # fetched by the agent. flake.lock's narHash is its tree hash, which Nix
