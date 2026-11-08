@@ -7,15 +7,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1794100554,
-        "narHash": "sha256-ZFGeW1x85JdSrG9truY4F9Pnlc3Ds893PsTVbqbwUFo=",
+        "lastModified": 1794143492,
+        "narHash": "sha256-jV6TESmEFihdNO0lift5nuUfM5rE3iKQbSZmvWLJEgs=",
         "owner": "microvm-tools",
         "repo": "agent-vm",
-        "rev": "baf105146e7c079a8873472e53e2a243a1f6f951",
+        "rev": "8c18102f9d22af8e47ee1595e78dabd815db0e64",
         "type": "github"
       },
       "original": {
         "owner": "microvm-tools",
+        "ref": "v0.19.0",
         "repo": "agent-vm",
         "type": "github"
       }
@@ -135,13 +136,13 @@
       "locked": {
         "lastModified": 1794077747,
         "narHash": "sha256-mC2ZrZSmGXgFZtqt8YcxhKMHKN6DgzTRgykEHePcYgg=",
-        "owner": "systemstart",
+        "owner": "microvm-tools",
         "repo": "microvm-policy",
         "rev": "9c49a0ccee1102c9e07e6fb90daff4b654726125",
         "type": "github"
       },
       "original": {
-        "owner": "systemstart",
+        "owner": "microvm-tools",
         "ref": "v0.6.1",
         "repo": "microvm-policy",
         "type": "github"
