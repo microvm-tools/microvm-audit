@@ -2,8 +2,9 @@
   description = "microvm-audit: a contained, no-egress security-audit run of a pinned skill against a repository, in a claude-microvm VM";
 
   nixConfig = {
-    extra-substituters = [ "https://systemstart.cachix.org" "https://microvm.cachix.org" ];
+    extra-substituters = [ "https://microvm-tools.cachix.org" "https://systemstart.cachix.org" "https://microvm.cachix.org" ];
     extra-trusted-public-keys = [
+      "microvm-tools.cachix.org-1:OmNkdhRACxrceImh52cuegLuzJCj5hZFwFA8scRBk7A="
       "systemstart.cachix.org-1:hSTfDlXstyuVVukogR0sEmt8wJsaplp7NvisgUugNpE="
       "microvm.cachix.org-1:oXnBc6hRE3eX5rSYdRyMYXnfzcCxC7yKPTbZXALsqys="
     ];
