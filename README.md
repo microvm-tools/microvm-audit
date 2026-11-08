@@ -1,7 +1,7 @@
 # microvm-audit
 
 One command runs a pinned security-audit skill against one commit of a
-repository, in a sealed [claude-microvm](https://github.com/systemstart/claude-microvm)
+repository, in a sealed [claude-microvm](https://github.com/microvm-tools/agent-vm)
 VM. It hands back the report and the evidence of how contained the run was.
 
 ```sh
@@ -150,6 +150,10 @@ home, the retained output and the model API.
 ```sh
 make check        # nix flake check
 ```
+
+CI runs the same on every pull request and on `main`, and builds the whole
+runner (`.github/workflows/ci.yml`). Renovate proposes input updates; a new
+skill rev comes as its own PR, to be read before it is merged.
 
 | check | what |
 |---|---|

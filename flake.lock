@@ -9,14 +9,14 @@
       "locked": {
         "lastModified": 1794100554,
         "narHash": "sha256-ZFGeW1x85JdSrG9truY4F9Pnlc3Ds893PsTVbqbwUFo=",
-        "owner": "systemstart",
-        "repo": "claude-microvm",
+        "owner": "microvm-tools",
+        "repo": "agent-vm",
         "rev": "baf105146e7c079a8873472e53e2a243a1f6f951",
         "type": "github"
       },
       "original": {
-        "owner": "systemstart",
-        "repo": "claude-microvm",
+        "owner": "microvm-tools",
+        "repo": "agent-vm",
         "type": "github"
       }
     },
