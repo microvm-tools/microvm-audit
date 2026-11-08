@@ -9,13 +9,13 @@
       "locked": {
         "lastModified": 1794143492,
         "narHash": "sha256-jV6TESmEFihdNO0lift5nuUfM5rE3iKQbSZmvWLJEgs=",
-        "owner": "microvm-tools",
+        "owner": "nix-gizmos",
         "repo": "agent-vm",
         "rev": "8c18102f9d22af8e47ee1595e78dabd815db0e64",
         "type": "github"
       },
       "original": {
-        "owner": "microvm-tools",
+        "owner": "nix-gizmos",
         "ref": "v0.19.0",
         "repo": "agent-vm",
         "type": "github"
@@ -136,13 +136,13 @@
       "locked": {
         "lastModified": 1794077747,
         "narHash": "sha256-mC2ZrZSmGXgFZtqt8YcxhKMHKN6DgzTRgykEHePcYgg=",
-        "owner": "microvm-tools",
+        "owner": "nix-gizmos",
         "repo": "microvm-policy",
         "rev": "9c49a0ccee1102c9e07e6fb90daff4b654726125",
         "type": "github"
       },
       "original": {
-        "owner": "microvm-tools",
+        "owner": "nix-gizmos",
         "ref": "v0.6.1",
         "repo": "microvm-policy",
         "type": "github"

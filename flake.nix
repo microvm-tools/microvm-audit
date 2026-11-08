@@ -2,8 +2,9 @@
   description = "microvm-audit: a contained, no-egress security-audit run of a pinned skill against a repository, in a claude-microvm VM";
 
   nixConfig = {
-    extra-substituters = [ "https://microvm-tools.cachix.org" "https://systemstart.cachix.org" "https://microvm.cachix.org" ];
+    extra-substituters = [ "https://nix-gizmos.cachix.org" "https://microvm-tools.cachix.org" "https://systemstart.cachix.org" "https://microvm.cachix.org" ];
     extra-trusted-public-keys = [
+      "nix-gizmos.cachix.org-1:a8qWp7lYufNBEKQEpJf54r0WVE0ksypqnFxOyemSlX4="
       "microvm-tools.cachix.org-1:OmNkdhRACxrceImh52cuegLuzJCj5hZFwFA8scRBk7A="
       "systemstart.cachix.org-1:hSTfDlXstyuVVukogR0sEmt8wJsaplp7NvisgUugNpE="
       "microvm.cachix.org-1:oXnBc6hRE3eX5rSYdRyMYXnfzcCxC7yKPTbZXALsqys="
@@ -11,7 +12,7 @@
   };
 
   inputs = {
-    claude-vm.url = "github:microvm-tools/agent-vm/v0.19.0";
+    claude-vm.url = "github:nix-gizmos/agent-vm/v0.19.0";
 
     # The skill: third-party instructions, so pinned to a commit and never
     # fetched by the agent. flake.lock's narHash is its tree hash, which Nix

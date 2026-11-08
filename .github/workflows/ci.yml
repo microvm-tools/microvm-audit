@@ -23,12 +23,12 @@ jobs:
           diagnostic-endpoint: ''
       - uses: cachix/cachix-action@38b082610b782e7e93e209c35fd730d399dee866 # v17
         with:
-          name: microvm-tools
+          name: nix-gizmos
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           signingKey: ${{ secrets.CACHIX_SIGNING_KEY }}
-          # microvm: upstream microvm.nix's QEMU variant; systemstart: agent-vm's
-          # earlier cache, until microvm-tools has caught up.
-          extraPullNames: microvm,systemstart
+          # microvm: upstream microvm.nix's QEMU variant; microvm-tools, systemstart:
+          # agent-vm's earlier caches, until nix-gizmos has caught up.
+          extraPullNames: microvm,microvm-tools,systemstart
       # sandbox (a NixOS VM test; the runner has KVM), wrapper and guest.
       - run: nix flake check --impure -L
       # The whole runner: the audit guest on top of agent-vm.
