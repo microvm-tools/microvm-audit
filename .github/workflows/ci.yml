@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      # The guest runs Claude Code, which is unfree.
+      NIXPKGS_ALLOW_UNFREE: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: DeterminateSystems/nix-installer-action@v23
+        with:
+          determinate: false
+          diagnostic-endpoint: ''
+      - uses: cachix/cachix-action@v17
+        with:
+          name: microvm-tools
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          signingKey: ${{ secrets.CACHIX_SIGNING_KEY }}
+          # microvm: upstream microvm.nix's QEMU variant; systemstart: agent-vm's
+          # earlier cache, until microvm-tools has caught up.
+          extraPullNames: microvm,systemstart
+      # sandbox (a NixOS VM test; the runner has KVM), wrapper and guest.
+      - run: nix flake check --impure -L
+      # The whole runner: the audit guest on top of agent-vm.
+      - run: nix build --impure .#default

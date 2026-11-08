@@ -151,6 +151,10 @@ home, the retained output and the model API.
 make check        # nix flake check
 ```
 
+CI runs the same on every pull request and on `main`, and builds the whole
+runner (`.github/workflows/ci.yml`). Renovate proposes input updates; a new
+skill rev comes as its own PR, to be read before it is merged.
+
 | check | what |
 |---|---|
 | `sandbox` | `audit-sandbox` in a NixOS VM test, each control checked from inside the sandbox. Every denial has a positive control first, so a sandbox that failed to start cannot pass as one that denied |

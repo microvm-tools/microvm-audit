@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "schedule": [
+    "before 9am on monday"
+  ],
+  "nix": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 7am on monday"
+    ]
+  },
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "commitMessagePrefix": "ci(deps):"
+    },
+    {
+      "matchManagers": [
+        "nix"
+      ],
+      "commitMessagePrefix": "chore(deps):"
+    },
+    {
+      "matchManagers": [
+        "nix"
+      ],
+      "matchPackageNames": [
+        "skill"
+      ],
+      "commitMessagePrefix": "feat(deps):",
+      "automerge": false,
+      "prBodyNotes": [
+        "This moves the pinned security-audit skill: what the agent is told to do in every run. Read the skill's diff before merging; the next run's evidence records the new rev and narHash."
+      ]
+    }
+  ]
+}
